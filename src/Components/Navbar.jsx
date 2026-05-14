@@ -7,12 +7,15 @@ export default function Navbar({ darkMode, setDarkMode, notesCount }) {
 
     border-b border-zinc-800">
       <div className="max-w-7xl mx-auto flex items-center 
+
       justify-between">
         
- <div className="flex items-center gap-3">
+ <div className="flex items-center 
+ gap-3">
 
-          <div className="bg-yellow-400 text-black p-3 
-          rounded-2xl 
+  <div className="bg-yellow-400 text-black p-3
+
+  rounded-2xl 
 
           rotate-6 shadow-md">
             <FaStickyNote size={20} />

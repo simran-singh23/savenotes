@@ -10,6 +10,7 @@ export default function NoteForm({ addNote, darkMode }) {
   const handleFormat = (command) => {
     editorRef.current?.focus();
     document.execCommand(command, false, null);
+
     setDesc(editorRef.current?.innerHTML || "");
   };
 
@@ -29,7 +30,9 @@ export default function NoteForm({ addNote, darkMode }) {
 
     addNote(newNote);setTitle("");
     setDesc("");
-    if (editorRef.current) editorRef.current.innerHTML = "";
+    if (editorRef.current) 
+      
+      editorRef.current.innerHTML = "";
   };
 
   return (
@@ -51,10 +54,7 @@ export default function NoteForm({ addNote, darkMode }) {
 
       <RichTextToolbar darkMode={darkMode} onFormat={handleFormat} />
 
-      <div
-        ref={editorRef}
-        contentEditable
-        suppressContentEditableWarning
+      <div ref={editorRef} contentEditable suppressContentEditableWarning
         onInput={(e) => setDesc(e.currentTarget.innerHTML)}
         className="w-full min-h-32 border border-zinc-300 p-4 rounded-xl outline-none text-black bg-white [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6"
       >

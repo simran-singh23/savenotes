@@ -15,9 +15,7 @@ export default function NoteCard({ note, darkMode, onDelete }) {
           {note.title}
         </h2>
 
-        <button
-          type="button"
-          onClick={() => onDelete(note.id)}
+        <button type="button" onClick={() => onDelete(note.id)}
           className="shrink-0 rounded-lg bg-red-500 px-3 py-1 text-sm font-semibold text-white hover:bg-red-600 transition-colors"
         >
           Delete

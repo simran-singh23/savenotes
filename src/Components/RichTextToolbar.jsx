@@ -19,7 +19,7 @@ const RichTextToolbar = ({ darkMode, onFormat }) => {
     >
       <button type="button" onClick={() => applyStyle("bold")}
         className="h-10 min-w-10 rounded-xl bg-zinc-100 px-3 font-bold
-        
+
          text-black hover:bg-yellow-300 transition-colors"
       >
         B
@@ -32,6 +32,7 @@ const RichTextToolbar = ({ darkMode, onFormat }) => {
       </button>
 
       <button type="button" onClick={() => applyStyle("underline")}
+      
         className="h-10 min-w-10 rounded-xl bg-zinc-100 px-3 underline text-black
          hover:bg-yellow-300 transition-colors"
       >
